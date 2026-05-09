@@ -1,9 +1,7 @@
-**Theorem.** The set of all *factorions* in base 10 is exactly $\{1, 2, 145, 40585\}$. That is, a natural number $n$ equals the sum of the factorials of its decimal digits if and only if $n \in \{1, 2, 145, 40585\}$.
+**Theorem.** The set of factorions in $\mathbb{N}$ is exactly $\{1, 2, 145, 40585\}$.
 
-More precisely, writing $n$ in base 10 as the sequence of digits $d_1, d_2, \ldots, d_k$ (each $d_i \in \{0,\ldots,9\}$), define
+*Proof.* We show the two inclusions separately.
 
-$$F(n) = \sum_{i=1}^{k} d_i!$$
+$(\subseteq)$ Let $n \in \mathbb{N}$ be a factorion. By **Factorion Upper Bound**, every factorion satisfies $n \leq 2540160$. Applying **Factorion Finite Check** to $n$ with this bound, membership in the finite candidate set is decidable, and $n$ must lie in $\{1, 2, 145, 40585\}$.
 
-Then $\{n \in \mathbb{N} \mid n = F(n)\} = \{1, 2, 145, 40585\}$.
-
-*Proof.* Unsolved.
+$(\supseteq)$ Let $n \in \{1, 2, 145, 40585\}$. In each case one verifies directly that $n \leq 2540160$, so **Factorion Finite Check** applies, and one confirms by direct computation that each element is indeed a factorion. $\blacksquare$
