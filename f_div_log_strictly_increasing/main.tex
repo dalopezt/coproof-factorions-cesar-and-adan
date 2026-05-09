@@ -1,7 +1,4 @@
-% Label: F Div Log Strictly Increasing
-
-**Theorem (F Div Log Strictly Increasing).** For all real numbers $x$ and $y$ with $3 < x \leq y$, we have
-
+**Theorem.** For all real numbers $x, y$ with $3 < x$ and $x \leq y$, we have
 $$\frac{x}{\log x} \leq \frac{y}{\log y}.$$
 
-*Proof.* Unsolved.
+*Proof.* Since $3 < x \leq y$, both $x$ and $y$ are positive. Because $x > 3 > e$, we have $\log x > 0$ and $\log y > 0$. The key ingredient is that the function $t \mapsto \frac{\log t}{t}$ is **antitone** (decreasing) on $[e, \infty)$; since $e \leq x \leq y$, this gives $\frac{\log y}{y} \leq \frac{\log x}{x}$. Cross-multiplying (all quantities are positive), this inequality rearranges directly to $\frac{x}{\log x} \leq \frac{y}{\log y}$. $\blacksquare$
