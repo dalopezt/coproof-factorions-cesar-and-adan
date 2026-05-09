@@ -1,5 +1,15 @@
-% Label: Factorion Upper Bound
+**Theorem.** Every factorion is at most $2{,}540{,}160$. That is, for all $n \in \mathbb{N}$, if $n$ is a factorion then $n \leq 2{,}540{,}160$.
 
-**Theorem (Factorion Upper Bound).** Every factorion $n \in \mathbb{N}$ satisfies $n \leq 2540160$.
+*Proof.* Let $n \in \mathbb{N}$ be a factorion. We split into two cases according to whether $n < 10^7$.
 
-*Proof.* Unsolved.
+**Case 1: $n < 10^7$.** The result follows immediately from \textbf{Seven Digit Factorion Le}, which asserts that every factorion with fewer than eight decimal digits is bounded above by $2{,}540{,}160$.
+
+**Case 2: $n \geq 10^7$.** We derive a contradiction, showing no factorion of this size can exist. Consider the function $f(x) = x / \log x$. By \textbf{Threshold At Ten7}, we have
+$$362880 < \frac{10^7}{\log(10^7)}.$$
+Since $n \geq 10^7$, it follows from \textbf{F Div Log Strictly Increasing} that $f$ is increasing on $[10^7, \infty)$, giving
+$$\frac{10^7}{\log(10^7)} \leq \frac{n}{\log n}.$$
+Chaining these two inequalities yields
+$$362880 < \frac{n}{\log n}.$$
+Note that $362880 = 9!$ is the maximum digit-factorial contribution per digit. This lower bound on $n/\!\log n$ means $n$ grows faster than any sum of digit factorials can keep pace with. Consequently, \textbf{Above Threshold Not Factorion} applies, concluding that $n$ cannot be a factorion — a contradiction.
+
+In both cases the bound $n \leq 2{,}540{,}160$ holds. $\blacksquare$
