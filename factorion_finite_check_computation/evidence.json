@@ -1,0 +1,45 @@
+{
+  "artifacts": {
+    "decompress_hint": "Python: import gzip,base64,pathlib; raw=base64.b64decode(pathlib.Path('<file>.gz.b64').read_text()); print(gzip.decompress(raw).decode('utf-8')[:500])",
+    "full_result_compressed_b64": "factorion_finite_check_computation/evidence_full.json.gz.b64",
+    "full_result_hash_sha256": "b960e993052488bc779371222aa902f469a0361c2e83067a52df198426b05803",
+    "records_csv_compressed_b64": null,
+    "records_csv_hash_sha256": null
+  },
+  "entrypoint": "run",
+  "error": null,
+  "evidence": {
+    "count_checked": 2540160,
+    "expected": [
+      1,
+      2,
+      145,
+      40585
+    ],
+    "factorions_found": [
+      1,
+      2,
+      145,
+      40585
+    ],
+    "upper_bound": 2540160
+  },
+  "language": "python",
+  "lean_statement": "\u2200 n : \u2115, n \u2264 2540160 \u2192 (isFactorion n \u2194 n \u2208 ({1, 2, 145, 40585} : Set \u2115))",
+  "node_name": "factorion_finite_check_computation",
+  "processing_time_seconds": 4.190089,
+  "records_count": 0,
+  "stderr": "",
+  "stdout": "",
+  "sufficient": true,
+  "summary": "Scanned integers 1..2540160. Factorions found: [1, 2, 145, 40585]. Expected: [1, 2, 145, 40585]. Match: True.",
+  "target": {
+    "expected_set": [
+      1,
+      2,
+      145,
+      40585
+    ],
+    "kind": "exact_set_check"
+  }
+}
